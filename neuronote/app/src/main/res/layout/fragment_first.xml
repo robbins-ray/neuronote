@@ -13,7 +13,7 @@
         android:clickable="true"
         android:contentDescription="@android:string/untitled"
         android:drawingCacheQuality="high"
-        android:onClick="@string/first_fragment_label"
+        android:onClick="emoji_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
