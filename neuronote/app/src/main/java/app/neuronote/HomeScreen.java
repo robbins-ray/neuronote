@@ -1,57 +1,56 @@
 package app.neuronote;
 
-import static android.content.Intent.getIntent;
-import static android.content.Intent.parseIntent;
-
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.view.*;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.widget.ImageViewCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.fragment.NavHostFragment;
 
-import java.net.URISyntaxException;
+import java.util.Objects;
 
 import app.neuronote.databinding.FragmentHomeBinding;
 
 public class HomeScreen extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentHomeBinding fhbinding;
+    private ImageView emoji;
 
+    @Nullable
     @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        fhbinding = FragmentHomeBinding.inflate(inflater, container, false);
+        return fhbinding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
 
-        binding.getRoot().setOnClickListener(new View.OnClickListener() {
+        fhbinding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                NavHostFragment.findNavController(HomeScreen.this)
-                        .navigate(R.id.action_Home_to_emojiSelector);
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HomeScreen.this).navigate(R.id.action_Home_to_emojiSelector);
             }
+
         });
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+        fhbinding = null;
     }
 
 }
