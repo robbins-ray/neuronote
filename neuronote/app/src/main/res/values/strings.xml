@@ -10,4 +10,14 @@
     <string name="emoji">Emoji</string>
     <string name="JournalTV">Journal Text View</string>
     <string name="pain_plane_drawable">Pain Plane Drawable</string>
+    <!-- Preference Titles -->
+    <string name="notifications_header">Notifications</string>
+    <string name="notifications_settings_header">Notifications Settings</string>
+
+    <!-- Messages Preferences -->
+    <string name="notifications">Notifications On/Off</string>
+
+    <!-- Sync Preferences -->
+    <string name="notify_weekly">Weekly Notifications</string>
+    <string name="notify_daily">Daily Notifications</string>
 </resources>
