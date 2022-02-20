@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,14 +12,13 @@
         android:layout_width="318dp"
         android:layout_height="274dp"
         android:clickable="true"
-        android:contentDescription="@android:string/untitled"
+        android:contentDescription="@android:string/autofill"
         android:drawingCacheQuality="high"
         android:onClick="@string/fragment_emoji_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/default_emoji"
-        tools:srcCompat="@drawable/default_emoji" />
+        app:srcCompat="@drawable/default_emoji" />
 
     <ImageView
         android:id="@+id/painPlane"
