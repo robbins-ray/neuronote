@@ -19,11 +19,11 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.net.URISyntaxException;
 
-import app.neuronote.databinding.FragmentFirstBinding;
+import app.neuronote.databinding.FragmentHomeBinding;
 
 public class HomeScreen extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentHomeBinding binding;
 
     @Override
     public View onCreateView(
@@ -31,7 +31,7 @@ public class HomeScreen extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -43,7 +43,7 @@ public class HomeScreen extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(HomeScreen.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        .navigate(R.id.action_Home_to_emojiSelector);
             }
         });
     }
