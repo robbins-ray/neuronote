@@ -10,10 +10,12 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import app.neuronote.databinding.FragmentEmojiSelectorBinding;
+import app.neuronote.databinding.FragmentFirstBinding;
 
 public class EmojiSelector extends Fragment {
 
-    private FragmentEmojiSelectorBinding binding;
+    private @NonNull
+    FragmentFirstBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +23,7 @@ public class EmojiSelector extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentEmojiSelectorBinding.inflate(inflater, container, false);
+        binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -29,11 +31,11 @@ public class EmojiSelector extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.emoji.setOnClickListener(new View.OnClickListener() {
+        binding.buttonEmoji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(EmojiSelector.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                        .navigate(R.id.action_EmojiSelector_to_FirstFragment);
             }
         });
     }

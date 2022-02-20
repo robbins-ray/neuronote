@@ -19,11 +19,11 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.net.URISyntaxException;
 
+import app.neuronote.databinding.FragmentFirstBinding;
+
 public class HomeScreen extends Fragment {
 
     private FragmentFirstBinding binding;
-    private Object selectedEmoji;
-    private Object EmojiSelector;
 
     @Override
     public View onCreateView(
@@ -41,7 +41,7 @@ public class HomeScreen extends Fragment {
 
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 NavHostFragment.findNavController(HomeScreen.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
@@ -52,12 +52,6 @@ public class HomeScreen extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }
-
-    public void emoji_selector(View v) {
-        v.setOnClickListener(this::emoji_selector);
-        ImageButton ibemoji = (ImageButton) v;
-        Intent emoji = new Intent();
     }
 
 }
