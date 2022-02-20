@@ -14,11 +14,11 @@
         android:clickable="true"
         android:contentDescription="@android:string/autofill"
         android:drawingCacheQuality="auto"
+        android:focusable="auto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/default_emoji"
-        android:focusable="true"/>
+        app:srcCompat="@drawable/default_emoji" />
 
     <ImageView
         android:id="@+id/painPlane"
