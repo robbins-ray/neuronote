@@ -13,11 +13,6 @@
         <action
             android:id="@+id/action_Home_to_emojiSelector"
             app:destination="@id/emojiSelector" />
-        <argument
-            android:name="Emoji"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="@drawable_default_emoji.png" />
         <action
             android:id="@+id/action_Home_to_mainActivity"
             app:destination="@id/mainActivity" />
