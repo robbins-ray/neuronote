@@ -80,9 +80,6 @@ public class EmojiSelector extends DialogFragment {
                 Toast.makeText(getActivity(), nameList[pos], Toast.LENGTH_SHORT).show();
                 String selectedName =nameList[pos];
                 int selectedImage = emojiIcons[pos];
-
-
-
             }
         });
 

@@ -42,4 +42,27 @@
         android:name="app.neuronote.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/dataDownload"
+        android:name="app.neuronote.DataDownload"
+        android:label="fragment_data_download"
+        tools:layout="@layout/fragment_data_download" >
+        <action
+            android:id="@+id/action_dataDownload_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/help"
+        android:name="app.neuronote.Help"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_help_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/journal"
+        android:name="app.neuronote.Journal"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" />
 </navigation>

@@ -2,6 +2,7 @@ package app.neuronote;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ import app.neuronote.databinding.FragmentHomeBinding;
 public class HomeScreen extends Fragment {
 
     private FragmentHomeBinding fhbinding;
-    private ImageView emoji;
+    private int button = R.id.button_emoji;
 
     @Nullable
     @Override
@@ -34,7 +35,7 @@ public class HomeScreen extends Fragment {
 
     }
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, int button, Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
 

@@ -46,10 +46,10 @@ public class EmojiHelper extends BaseAdapter{
         }
 
         TextView nameTV = (TextView) convertView.findViewById(R.id.m_emojitext);
-        ImageView ing= (ImageView) convertView.findViewById(R.id.m_emojiimage);
+        ImageView imageView= (ImageView) convertView.findViewById(R.id.m_emojiimage);
 
         nameTV.setText(names[pos]);
-        ing.setImageResource(emojis[pos]);
+        imageView.setImageResource(emojis[pos]);
         return convertView;
     }
 }
